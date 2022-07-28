@@ -15,7 +15,7 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/tarcisiodelmondes/ignite-challenge-coffee-delivery?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/tarcisiodelmondes/ignite-challenge-coffee-delivery?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/tarcisiodelmondes/ignite-challenge-coffee-delivery?color=%2356BEB8">
 
 </p>
 
