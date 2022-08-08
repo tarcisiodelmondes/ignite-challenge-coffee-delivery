@@ -43,7 +43,6 @@ export function ProductCard({ product }: ProductCardProps) {
     const moreProductQuantity = productQuantity + 1;
 
     setProductQuantity(moreProductQuantity);
-    addProductToCart(product, moreProductQuantity);
   }
 
   function removeMoreProduct() {
