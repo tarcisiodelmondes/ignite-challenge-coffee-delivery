@@ -26,10 +26,24 @@ interface CartContextProviderProps {
 }
 
 export function CartContextProvider({ children }: CartContextProviderProps) {
-  const [cartProducts, setCartProducts] = useState<Product[]>([]);
+  const [cartProducts, setCartProducts] = useState<Product[]>(() => {
+    const cartProductsOfLocalStorage = localStorage.getItem(
+      "coffee-delivery:storage"
+    );
+
+    if (cartProductsOfLocalStorage) {
+      const cartProductsToObject = JSON.parse(cartProductsOfLocalStorage);
+
+      return cartProductsToObject;
+    }
+
+    return [];
+  });
 
   useEffect(() => {
-    console.log(cartProducts);
+    const cartProductsToString = JSON.stringify(cartProducts);
+
+    localStorage.setItem("coffee-delivery:storage", cartProductsToString);
   }, [cartProducts]);
 
   function addProductToCart(
